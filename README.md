@@ -85,13 +85,15 @@ The app will fetch historical stock data, apply the selected strategy, and calcu
 
 **Step 4: Review Results**
 
-The results will show:
+The results are displayed for each stock individually, followed by a combined summary if multiple stocks were selected. The output includes:
 
-**Strategy Performance:** Final portfolio value, total return, Sharpe ratio, and other performance metrics.
+**Strategy Performance:** Final portfolio value, total return, Sharpe ratio, and other performance metrics for each stock.
 
-**Trade History:** A detailed table of all trades executed during the backtest.
+**Combined Portfolio Performance:** A summary of the total portfolio value and return across all selected stocks.
 
-**Visualizations:** Interactive charts showing portfolio value vs. HODL strategy, buy/sell signals, and stock price with moving averages or Bollinger Bands.
+**Trade History:** A detailed table of all trades executed during the backtest for each stock.
+
+**Visualizations:** Interactive charts to analyze performance (see "Visualizations" section below).
 
 # Performance Metrics
 
@@ -105,17 +107,28 @@ The results will show:
 
 **Annualized Return:** The yearly return based on the total return over the backtest period.
 
+**Total Trades:** The total number of trades executed.
+
+**Winning Trades:** The number of profitable trades.
+
+**Losing Trades:** The number of unprofitable trades.
+
 **Win/Loss Ratio:** The ratio of profitable to unprofitable trades.
 
 **Average Profit per Trade:** The average percentage profit for each trade executed.
 
+# Visualizations
 
-  
-- **Buy/Sell Signals**: A chart displaying the buy and sell signals with corresponding stock price movements.
+The application provides several interactive charts to help you analyze the backtest results:
+
+- **Portfolio Value vs. HODL**: Compares the growth of your initial capital using the selected strategy versus a simple buy-and-hold approach.
+- **Buy/Sell Signals**: Displays the stock's price chart along with the strategy indicators (Moving Averages or Bollinger Bands) and marks the exact points where buy and sell trades were executed.
+- **Sharpe Ratio by Stock**: A bar chart comparing the Sharpe ratio of each stock in the portfolio, which is useful for evaluating risk-adjusted performance across different assets.
+- **Final Value per Stock**: Shows the final value contributed by each stock's backtest to the total portfolio, illustrating which assets were the top performers.
 
 # Notes
 
-The app currently supports stock data from Yahoo Finance (via yfinance), so historical data may not be available for all tickers or may be limited based on the stock.
+The app currently supports stock data from Yahoo Finance (via `yfinance`), so historical data may not be available for all tickers or may be limited based on the stock.
 
 Make sure the total allocation for your portfolio sums to 100%. The app will notify you if the allocation is incorrect.
 
